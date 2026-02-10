@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragonik 🎶</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+    h1 {
+      padding: 25px;
+      font-size: 2.8rem;
+      color: #ffe600;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      background: #111;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    }
+    .thumb {
+      width: 100%;
+      display: block;
+      cursor: pointer;
+    }
+    .title {
+      padding: 10px;
+      background: #1a1a1a;
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #fff;
+    }
+    .video-embed {
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+      position: relative;
+      display: none;
+    }
+    .video-embed iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .premiere {
+      margin-top: 30px;
+      font-size: 1.4rem;
+      color: #ff7070;
+    }
+    .premiere a {
+      color: #00d4ff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .premiere a:hover {
+      color: #ffe600;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎧Dragonik🎶</h1>
+
+  <div class="gallery">
+
+    <!-- Piosenka 1 -->
+    <div class="item">
+      <img class="thumb" src="https://img.youtube.com/vi/2-nvcdfRkqw/maxresdefault.jpg" 
+           onclick="showVideo('vid1')" alt="Dragonik - TROFEUM">
+      <div class="title">Dragonik - TROFEUM</div>
+      <div id="vid1" class="video-embed">
+        <iframe src="https://www.youtube.com/embed/2-nvcdfRkqw" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Piosenka 2 -->
+    <div class="item">
+      <img class="thumb" src="https://img.youtube.com/vi/u3JhUmDT-PQ/maxresdefault.jpg" 
+           onclick="showVideo('vid2')" alt="Dragonik - Nowy Ja">
+      <div class="title">Dragonik - Nowy Ja</div>
+      <div id="vid2" class="video-embed">
+        <iframe src="https://www.youtube.com/embed/u3JhUmDT-PQ" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Piosenka 3 -->
+    <div class="item">
+      <img class="thumb" src="https://img.youtube.com/vi/W6bGAZSNPgs/maxresdefault.jpg" 
+           onclick="showVideo('vid3')" alt="Dragonik - letni okres(feat:siteń)">
+      <div class="title">Dragonik - letni okres(feat:siteń)</div>
+      <div id="vid3" class="video-embed">
+        <iframe src="https://www.youtube.com/embed/W6bGAZSNPgs" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Piosenka 4 -->
+    <div class="item">
+      <img class="thumb" src="https://img.youtube.com/vi/qE2oYANjWaw/maxresdefault.jpg" 
+           onclick="showVideo('vid4')" alt="Dragonik - Strach FF">
+      <div class="title">Dragonik - Strach FF</div>
+      <div id="vid4" class="video-embed">
+        <iframe src="https://www.youtube.com/embed/qE2oYANjWaw" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Piosenka 5 -->
+    <div class="item">
+      <img class="thumb" src="https://img.youtube.com/vi/ySwHRiian5s/maxresdefault.jpg" 
+           onclick="showVideo('vid5')" alt="Dragonik - Ciągle">
+      <div class="title">Dragonik - Ciągle</div>
+      <div id="vid5" class="video-embed">
+        <iframe src="https://www.youtube.com/embed/ySwHRiian5s" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="premiere">
+    📢 <strong>Premiera!</strong>  
+    Oglądaj nowy teledysk tutaj:  
+    <a href="https://youtu.be/OgDn-tRVNfE?si=G8eaarWSuu1CdGBs" target="_blank">Kliknij, aby zobaczyć premierę</a>
+  </p>
+
+  <script>
+    function showVideo(id) {
+      const el = document.getElementById(id);
+      if (el.style.display === 'block') el.style.display = 'none';
+      else el.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
